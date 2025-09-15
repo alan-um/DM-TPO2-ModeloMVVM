@@ -9,14 +9,16 @@ public class Libro implements Serializable {
     private int fechaPublicacion;
     private String genero;
     private String descripcion;
+    private int imagen;//Se guarda el ID que tiene según la carpeta R.drawable
 
-    public Libro(int isbn, String titulo, String autor, int fechaPublicacion, String genero, String descripcion) {
+    public Libro(int isbn, String titulo, String autor, int fechaPublicacion, String genero, String descripcion, int imagen) {
         this.isbn = isbn;
         this.titulo = titulo;
         this.autor = autor;
         this.fechaPublicacion = fechaPublicacion;
         this.genero = genero;
         this.descripcion = descripcion;
+        this.imagen = imagen;
     }
 
     public int getIsbn() {
@@ -41,5 +43,9 @@ public class Libro implements Serializable {
 
     public String getDescripcion() {
         return descripcion;
+    }
+
+    public int getImagen() {
+        return imagen;
     }
 }

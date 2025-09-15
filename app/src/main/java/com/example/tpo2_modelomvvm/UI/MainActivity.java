@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         viewModel.getmLibro().observe(this,libro -> {
-            Toast.makeText(this, "Libro encontrado -> "+libro.getTitulo()+" - "+libro.getAutor(), Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Libro encontrado -> "+libro.getTitulo()+" - "+libro.getAutor(), Toast.LENGTH_SHORT).show();
             Intent i = new Intent(this,DetalleLibro.class);
             i.putExtra("libro",libro);
             startActivity(i);
